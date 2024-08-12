@@ -144,3 +144,24 @@ def about_us():
     value = config.get('lhm.about_us', '/about')
     return value
 
+@helper
+def username_info():
+    '''Return the value of the CKAN About Us config setting.
+
+    To enable showing info about how to choose the username
+    [app:main] section of your CKAN config file::
+      lhm.username_info = username_info
+    '''
+    value = config.get('lhm.username_info', '')
+    return value
+
+@helper
+def password_info():
+    '''Return the value of the CKAN About Us config setting.
+
+    To enable showing the info about which characters can be choosen for the password
+    [app:main] section of your CKAN config file::
+      lhm.password_info = password_info
+    '''
+    value = config.get('lhm.password_info', '')
+    return value
